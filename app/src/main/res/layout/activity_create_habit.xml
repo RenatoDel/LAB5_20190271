@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear Nuevo Hábito"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Nombre del hábito -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del hábito *"
+            android:textSize="16sp"
+            android:textColor="#34495E"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etHabitName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Ej: Hacer ejercicio, Leer un libro"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="#2C3E50"
+            android:textColorHint="#95A5A6"
+            android:layout_marginBottom="20dp"
+            android:inputType="textCapSentences"
+            android:maxLines="1" />
+
+        <!-- Categoría del hábito -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categoría *"
+            android:textSize="16sp"
+            android:textColor="#34495E"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="#2C3E50"
+            android:background="@drawable/spinner_background"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Frecuencia -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frecuencia (para pruebas puedes usar minutos) *"
+            android:textSize="16sp"
+            android:textColor="#34495E"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repetir cada "
+                android:textSize="16sp"
+                android:textColor="#7F8C8D" />
+
+            <EditText
+                android:id="@+id/etFrequencyHours"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:hint="2"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#2C3E50"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_marginHorizontal="8dp"
+                android:maxLength="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="minutos"
+                android:textSize="16sp"
+                android:textColor="#7F8C8D" />
+
+        </LinearLayout>
+
+        <!-- Texto explicativo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Para pruebas: 1-5 minutos. Para uso real: 60+ minutos (1+ horas)"
+            android:textSize="12sp"
+            android:textColor="#3498DB"
+            android:background="#E8F4FD"
+            android:padding="8dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Fecha de inicio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha de inicio *"
+            android:textSize="16sp"
+            android:textColor="#34495E"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Seleccionar Fecha"
+                android:textColor="#3498DB"
+                android:background="@drawable/button_secondary_background"
+                android:layout_marginEnd="8dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="No seleccionada"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Hora de inicio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora de inicio *"
+            android:textSize="16sp"
+            android:textColor="#34495E"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <Button
+                android:id="@+id/btnSelectTime"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Seleccionar Hora"
+                android:textColor="#3498DB"
+                android:background="@drawable/button_secondary_background"
+                android:layout_marginEnd="8dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedTime"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="No seleccionada"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancelar"
+                android:textColor="#95A5A6"
+                android:background="@drawable/button_secondary_background"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnCreateHabit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Crear Hábito"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_primary_background"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

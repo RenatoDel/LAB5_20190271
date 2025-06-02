@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Configuraciones"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Campo para nombre de usuario -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu nombre:"
+        android:textSize="16sp"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Ingresa tu nombre"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="#2C3E50"
+        android:textColorHint="#95A5A6"
+        android:layout_marginBottom="24dp"
+        android:inputType="textPersonName" />
+
+    <!-- Campo para mensaje motivacional -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensaje motivacional:"
+        android:textSize="16sp"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etMotivationalMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tu mensaje motivacional"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="#2C3E50"
+        android:textColorHint="#95A5A6"
+        android:minLines="3"
+        android:maxLines="5"
+        android:gravity="top"
+        android:layout_marginBottom="24dp"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <!-- Sección de notificaciones motivacionales -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones motivacionales:"
+        android:textSize="16sp"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repetir cada "
+            android:textSize="14sp"
+            android:textColor="#7F8C8D" />
+
+        <EditText
+            android:id="@+id/etNotificationHours"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:hint="2"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="#2C3E50"
+            android:textColorHint="#95A5A6"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_marginHorizontal="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="horas"
+            android:textSize="14sp"
+            android:textColor="#7F8C8D" />
+
+    </LinearLayout>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Cancelar"
+            android:textColor="#95A5A6"
+            android:background="@drawable/button_secondary_background"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Guardar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_primary_background"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
